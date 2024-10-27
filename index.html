@@ -18,7 +18,7 @@
         }
         .form-container { 
             max-width: 500px; 
-            width: 100%;
+            width: 100%; 
             padding: 20px; 
             background-color: #222; 
             border-radius: 10px; 
@@ -48,9 +48,8 @@
             background-color: #4CAF50; 
             color: white; 
             cursor: pointer; 
-            font-weight: 600; 
-            transition: background-color 0.3s ease; 
-            margin-top: 20px; 
+            font-weight: 600;
+            margin-top: 20px;
         }
         button:hover { 
             background-color: #45a049; 
@@ -59,35 +58,24 @@
 </head>
 <body>
     <div class="form-container">
-        <h2>Заполните заявку на волонтера</h2>
-        <form id="volunteerForm">
-            <label for="username">Ваш Telegram username (без @):</label>
-            <input type="text" id="username" name="username" required>
-            
+        <form action="https://getform.io/f/bqoonpvb" method="POST" redirect="https://tgtitanium.github.io/volunteer/thanks">
+            <label for="username">Ваш Telegram Username</label>
+            <input type="text" id="username" name="username" placeholder="@username" required>
+
             <label for="name">Как вас зовут?</label>
-            <input type="text" id="name" name="name" required>
-            
+            <input type="text" id="name" name="name" placeholder="Ваше имя" required>
+
             <label for="age">Сколько вам лет?</label>
-            <input type="number" id="age" name="age" required>
-            
+            <input type="number" id="age" name="age" placeholder="Возраст" required>
+
             <label for="skills">Что вы умеете?</label>
-            <textarea id="skills" name="skills" required></textarea>
+            <textarea id="skills" name="skills" placeholder="Ваши навыки" rows="4" required></textarea>
+
+            <!-- Honeypot для защиты от спама -->
+            <input type="hidden" name="_gotcha" style="display:none !important">
             
-            <button type="button" onclick="submitForm()">Отправить</button>
+            <button type="submit">Отправить заявку</button>
         </form>
     </div>
-
-    <script>
-        function submitForm() {
-            // Считываем значения из формы
-            const username = document.getElementById('username').value;
-            const name = document.getElementById('name').value;
-            const age = document.getElementById('age').value;
-            const skills = document.getElementById('skills').value;
-
-            // Перенаправляем на страницу благодарности
-            window.location.href = `https://tgtitanium.github.io/volunteer/thanks`;
-        }
-    </script>
 </body>
 </html>
