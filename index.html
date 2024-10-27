@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анкета волонтера</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background-color: #191919; 
+            color: #ffffff; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            min-height: 100vh; 
+            margin: 0; 
+        }
+        .form-container { 
+            max-width: 500px; 
+            width: 100%;
+            padding: 20px; 
+            background-color: #222; 
+            border-radius: 10px; 
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3); 
+        }
+        label { 
+            display: block; 
+            margin-top: 15px; 
+            font-weight: 600; 
+        }
+        input, textarea, button { 
+            width: 100%; 
+            padding: 10px; 
+            margin-top: 8px; 
+            border-radius: 8px; 
+            border: none; 
+            font-size: 16px; 
+        }
+        input, textarea { 
+            background-color: #333; 
+            color: #ffffff; 
+        }
+        textarea { 
+            resize: vertical; 
+        }
+        button { 
+            background-color: #4CAF50; 
+            color: white; 
+            cursor: pointer; 
+            font-weight: 600; 
+            transition: background-color 0.3s ease; 
+            margin-top: 20px; 
+        }
+        button:hover { 
+            background-color: #45a049; 
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Заполните заявку на волонтера</h2>
+        <form id="volunteerForm">
+            <label for="username">Ваш Telegram username (без @):</label>
+            <input type="text" id="username" name="username" required>
+            
+            <label for="name">Как вас зовут?</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="age">Сколько вам лет?</label>
+            <input type="number" id="age" name="age" required>
+            
+            <label for="skills">Что вы умеете?</label>
+            <textarea id="skills" name="skills" required></textarea>
+            
+            <button type="button" onclick="submitForm()">Отправить</button>
+        </form>
+    </div>
+
+    <script>
+        function submitForm() {
+            // Считываем значения из формы
+            const username = document.getElementById('username').value;
+            const name = document.getElementById('name').value;
+            const age = document.getElementById('age').value;
+            const skills = document.getElementById('skills').value;
+
+            // Перенаправляем на страницу благодарности
+            window.location.href = `https://tgtitanium.github.io/thanks`;
+        }
+    </script>
+</body>
+</html>

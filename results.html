@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Результаты заявок</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background-color: #191919; 
+            color: #ffffff; 
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+        .results-container { 
+            max-width: 800px; 
+            width: 100%; 
+            background-color: #222; 
+            padding: 20px; 
+            border-radius: 10px; 
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3); 
+        }
+        h1 { 
+            text-align: center; 
+            color: #ffffff; 
+        }
+        table { 
+            width: 100%; 
+            border-collapse: collapse; 
+            margin-top: 20px; 
+        }
+        th, td { 
+            padding: 10px; 
+            border: 1px solid #333; 
+            text-align: left; 
+        }
+        th { 
+            background-color: #333; 
+            color: #ffffff; 
+            font-weight: 600; 
+        }
+        td { 
+            background-color: #444; 
+        }
+    </style>
+</head>
+<body>
+    <div class="results-container">
+        <h1>Результаты заявок</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Telegram Username</th>
+                    <th>Имя</th>
+                    <th>Возраст</th>
+                    <th>Навыки</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Здесь будут динамически добавляться строки с результатами -->
+                <tr>
+                    <td>username1</td>
+                    <td>Иван</td>
+                    <td>25</td>
+                    <td>Программирование, дизайн</td>
+                </tr>
+                <tr>
+                    <td>username2</td>
+                    <td>Анна</td>
+                    <td>22</td>
+                    <td>Волонтерство, организаторские навыки</td>
+                </tr>
+                <!-- Добавьте сюда больше строк по мере получения новых заявок -->
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
